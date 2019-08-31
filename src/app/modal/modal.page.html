@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="primary">
+      <ion-buttons start ion-button icon-only (click)="dismiss()">
+            <ion-icon name="md-arrow-back"></ion-icon>
+        </ion-buttons>
+       <ion-title>modal</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <ion-list lines="full">
+      <ion-item>
+        <ion-label position="stacked" color="primary">Correo Eléctronico</ion-label>
+        <ion-input name="email" type="email" required ngModel email>
+        </ion-input>
+      </ion-item>
+      <ion-text color="danger">
+        <p [hidden]="true" class="ion-padding-start">
+          Username is required
+        </p>
+      </ion-text>
+
+      <ion-item>
+        <ion-label position="stacked" color="primary">Contraseña</ion-label>
+        <ion-input name="password" type="password" required="true" ngModel minlength="8">
+        </ion-input>
+      </ion-item>
+    </ion-list>
+
+    <div class="ion-padding">
+      <ion-button type="submit" expand="block">Accesar</ion-button>
+    </div>
+  </form>
+    
+</ion-content>

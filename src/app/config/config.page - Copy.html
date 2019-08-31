@@ -1,0 +1,57 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons start ion-button icon-only (click)="gotoHome()">
+              <ion-icon name="md-arrow-back"></ion-icon>
+          </ion-buttons>
+         <ion-title>Agregar Dispositivo</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <section class="add_device" >
+      <form #C="ngForm" (ngSubmit)="onConfig(C)" [(ngModel)]="project" name="project">
+          <ion-list>
+            <section>
+              <ion-list-header>
+                <ion-label color="primary">Datos de la Empresa</ion-label>
+              </ion-list-header>
+              <ion-item>
+                <ion-label position="stacked" color="primary">Nombre de la Empresa</ion-label>
+                <ion-input name="emp" type="text" required ngModel ngDefaultControl>
+                </ion-input>
+              </ion-item>
+              <ion-item>
+                  <ion-label position="stacked" color="primary"> Sucursal </ion-label>
+                  <ion-input name="suc" type="text" required ngModel ngDefaultControl>
+                  </ion-input>
+               </ion-item>  
+            </section>
+            <section>
+            <ion-list-header>
+                <ion-label color="primary">Agregar Dispositivo</ion-label>
+            </ion-list-header>
+            
+              <ion-item color="light">
+                  <ion-select [interfaceOptions]="customPopoverOptions" interface="popover" placeholder="Seleccionar " ngModel name="selected">
+                    <ion-select-option value="inv">Inversor</ion-select-option>
+                    <ion-select-option value="blonde">Bateria 1</ion-select-option>
+                    <ion-select-option value="black">Bateria 2</ion-select-option>
+                    <ion-select-option value="red">Bateria3</ion-select-option>
+                  </ion-select>
+                                
+              </ion-item>
+              <ion-buttons id ="disp" color="primary" start ion-button icon-only>
+                  <ion-icon id ="dispicon" name="add-circle-outline"></ion-icon>
+                  <span id="ltra"> Agregar nuevo dispositivo </span>
+              </ion-buttons>
+  
+            </section>
+          </ion-list>
+      
+          <div class="ion-padding">
+            <ion-button type="submit" expand="block">Accesar</ion-button>
+          </div>
+        </form>
+    </section>
+      
+  </ion-content>

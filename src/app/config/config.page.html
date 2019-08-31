@@ -1,0 +1,94 @@
+  <ion-header>
+      <ion-toolbar>
+        <ion-buttons start ion-button icon-only (click)="gotoHome()">
+            <ion-icon color="light" name="md-arrow-back" color="dark"></ion-icon>
+        </ion-buttons>
+        <ion-title color="dark" slot="start">   
+        </ion-title>
+      </ion-toolbar>
+      <div id="heads">Configuración</div> 
+  </ion-header>
+  <ion-row style="height: 40px; background-color: #ECEFF1; border-bottom: 1px solid #C5C6CB;"></ion-row>
+
+  <ion-content padding>
+    <section class="add_device" > 
+        <ion-list>
+          <ion-list-header>
+                <ion-label color="dark">Datos de la Empresa</ion-label>
+          </ion-list-header>
+           <ion-item>
+              <ion-label position="stacked" color="dark">Nombre de la Empresa</ion-label>
+              <ion-input class="form-control" type="text" maxlength="40" [(ngModel)]="todo.emp" #myControl="ngModel"></ion-input>
+              <!-- <span>Please enter a framework name of no more than 40 characters</span> -->
+           </ion-item>
+           <ion-item>
+              <ion-label position="stacked" color="dark">Sucursal</ion-label>
+              <ion-input type="text" maxlength="40" [(ngModel)]="todo.suc"></ion-input>
+           </ion-item>
+        </ion-list> 
+        <div class="ion-padding">
+            <ion-button expand="block" [disabled]="!myControl.valid" color="dark" (click)="saveTodo()">Guardar</ion-button>
+        </div>        
+   </section>
+  </ion-content>
+
+
+<!-- <ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons start ion-button icon-only (click)="gotoHome()">
+              <ion-icon name="md-arrow-back"></ion-icon>
+          </ion-buttons>
+         <ion-title>Agregar Dispositivo</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <section class="add_device" >
+      <form #C="ngForm" (ngSubmit)="onConfig(C)" [(ngModel)]="project" name="config">
+          <ion-list mode="md">
+            <section>
+              <ion-list-header>
+                <ion-label color="primary">Datos de la Empresa</ion-label>
+              </ion-list-header>
+              <ion-item>
+                <ion-label position="stacked" color="primary">Nombre de la Empresa</ion-label>
+                <ion-input name="emp" type="text" required ngModel ngDefaultControl>
+                </ion-input>
+              </ion-item>
+              <ion-item>
+                  <ion-label position="stacked" color="primary"> Sucursal </ion-label>
+                  <ion-input name="suc" type="text" required ngModel ngDefaultControl>
+                  </ion-input>
+               </ion-item>  
+            </section>
+
+
+            <section>
+            <ion-list-header>
+                <ion-label color="primary">Agregar Dispositivo</ion-label>
+            </ion-list-header>
+            
+              <ion-item color="light">
+                  <ion-select [interfaceOptions]="customPopoverOptions" interface="popover" placeholder="Seleccionar " ngModel name="selected">
+                    <ion-select-option value="inv">Inversor</ion-select-option>
+                    <ion-select-option value="blonde">Bateria 1</ion-select-option>
+                    <ion-select-option value="black">Bateria 2</ion-select-option>
+                    <ion-select-option value="red">Bateria3</ion-select-option>
+                  </ion-select>
+                                
+              </ion-item>
+              <ion-buttons id ="disp" color="primary" start ion-button icon-only>
+                  <ion-icon id ="dispicon" name="add-circle-outline"></ion-icon>
+                  <span id="ltra"> Agregar nuevo dispositivo </span>
+              </ion-buttons>
+  
+            </section>
+          </ion-list>
+      
+          <div class="ion-padding">
+            <ion-button type="submit" expand="block">Accesar</ion-button>
+          </div>
+        </form>
+    </section>
+      
+  </ion-content> -->

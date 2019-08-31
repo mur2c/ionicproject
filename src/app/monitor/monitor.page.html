@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons start ion-button icon-only (click)="gotoHome()">
+        <ion-icon color="light" name="md-arrow-back" color="dark"></ion-icon>
+    </ion-buttons>
+    <ion-title color="dark" slot="start">   
+    </ion-title>
+  </ion-toolbar>
+  <div id="heads">Monitor</div> 
+</ion-header>
+
+<ion-content>
+        <div class="ion-padding">  
+          <ion-card>
+            <ion-card-header>
+              Line Chart
+            </ion-card-header>
+            <ion-card-content>
+              <canvas #lineCanvas></canvas>
+            </ion-card-content>
+          </ion-card>
+        </div>
+</ion-content>

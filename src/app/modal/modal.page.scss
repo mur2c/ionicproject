@@ -1,0 +1,49 @@
+//Aumentar el tamaño del icono <-
+ion-icon {
+    font-size: 40px; //Preferred size here
+  }
+
+  #disp {
+    font-size: 15px; //Preferred size here
+    color: #3880ff;
+    padding-top: 20px;
+  }
+
+  #dispicon {
+      font-size: 23px;
+      padding-left: 10px;
+  }
+
+  #ltra {
+      padding-left: 6px;
+  }
+
+.add_device {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    padding-top: 20px;
+  }
+
+ion-content {
+    padding-top: 20px;
+}
+
+ion-list-header {
+    font-size: 16px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+section {
+    padding: 20px;
+}
+
+ion-select {
+    color: #3880ff;
+}
+
+ion-select-option {
+    color: #3880ff;
+}
